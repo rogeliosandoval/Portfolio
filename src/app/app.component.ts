@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  homeActive = true;
+  projectsActive = false;
+  contactActive = false;
+
+  home() {
+    this.homeActive = true;
+    this.projectsActive = false;
+    this.contactActive = false;
+  }
+
+  projects() {
+    this.projectsActive = true;
+    this.homeActive = false;
+    this.contactActive = false;
+  }
+
+  contact() {
+    this.contactActive = true;
+    this.homeActive = false;
+    this.projectsActive = false;
+  }
 }
