@@ -7,6 +7,8 @@ import { Component, HostListener } from "@angular/core";
 })
 
 export class Home {
+    two = false;
+    skills = false;
 
     languages = [
         {name:"html", class:"html"},
@@ -22,5 +24,15 @@ export class Home {
         {name:"jquery", class:"jquery"},
         {name:"photoshop", class:"photoshop"}
     ];
+
+    @HostListener('window:scroll', ['$event']) onViewPortScroll() {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 25) {
+            this.two = true;
+        }
+        if (window.pageYOffset > 700) {
+            this.skills = true;
+        }
+    }
 
 }

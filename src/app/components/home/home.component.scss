@@ -20,6 +20,14 @@
     letter-spacing: 1.3px;
 }
 
+.mobile-section-two {
+    visibility: hidden;
+}
+
+.mobile-section-skills {
+    visibility: hidden;
+}
+
 .avatar {
     width: 48%;
     border-radius:  60px;
@@ -195,6 +203,14 @@
 
     .rocket {
         width: 80%;
+    }
+
+    .mobile-section-two {
+        display: none;
+    }
+
+    .mobile-section-skills {
+        display: none;
     }
 
 }
