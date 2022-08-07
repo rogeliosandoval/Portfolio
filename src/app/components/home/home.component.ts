@@ -1,4 +1,4 @@
-import { Component, HostListener } from "@angular/core";
+import { Component, ElementRef, HostListener, ViewChild } from "@angular/core";
 
 @Component({
     selector: 'home',
@@ -7,6 +7,9 @@ import { Component, HostListener } from "@angular/core";
 })
 
 export class Home {
+    @ViewChild('projectSection', { static: false }) projectSection!: ElementRef;
+    @ViewChild('projectSectionMobile', { static: false }) projectSectionMobile!: ElementRef;
+
     two = false;
     skills = false;
 
@@ -26,11 +29,12 @@ export class Home {
     ];
 
     @HostListener('window:scroll', ['$event']) onViewPortScroll() {
-        console.log(window.pageYOffset);
-        if (window.pageYOffset > 25) {
+        //mobile show mission statement
+        if (window.pageYOffset > 45) {
             this.two = true;
         }
-        if (window.pageYOffset > 700) {
+        //mobile show skills
+        if (window.pageYOffset > 650) {
             this.skills = true;
         }
     }

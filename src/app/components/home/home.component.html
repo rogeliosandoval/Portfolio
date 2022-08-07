@@ -1,5 +1,5 @@
-<div class="custom-container mt-5">
-    <div class="row">
+<div class="custom-container mt-4 mt-md-2">
+    <div class="row my-3 my-md-0">
         <div class="col-md-5 my-auto me">
             <div class="d-flex justify-content-center">
                 <img class="avatar" src="../../../assets/avatar.gif" alt="avatar">
@@ -14,8 +14,9 @@
             </div>
         </div>
     </div>
+    
     <!--mobile-->
-    <div class="mobile-section-two" *ngIf="!two">
+    <div class="d-block d-md-none" style="visibility:hidden;" *ngIf="!two">
         <div class="row mt-md-2">
             <div class="d-flex d-md-none col-md-4 justify-content-center my-3 text">
                 <img class="rocket" src="../../../assets/launch.png" alt="rocket">
@@ -73,41 +74,44 @@
     </div>
     <!--end desktop-->
     <!--mobile-->
-    <div class="mobile-section-skills" *ngIf="!skills">
-        <div class="d-flex justify-content-center">
-            <div class="titleText text-center">
-                Skills
+    <div class="d-block d-md-none" style="visibility:hidden;" *ngIf="!skills">
+        <div class="d-flex">
+            <div class="titleText">
+                <b style="color:powderblue;">|</b> Skills
             </div>
         </div>
         <div class="row d-flex justify-content-center px-md-0 py-md-3" style="background:rgba(128, 128, 128, 0.438); border:2px solid #000000;">
             <div class="col-md-1 mx-4 my-4 mx-md-0 my-md-2 icon d-flex justify-content-center" *ngFor="let language of languages">
                 <img class="{{language.class}}" src="../../../assets/icons/{{language.name}}.png" alt="icon">
             </div>
+            <span #projectSectionMobile class="d-block d-md-none"></span>
         </div>
     </div>
     <div class="d-block d-md-none skills pb-md-5 mt-4 mt-md-0" *ngIf="skills">
-        <div class="d-flex justify-content-center">
-            <div class="titleText text-center">
-                Skills
+        <div class="d-flex">
+            <div class="titleText">
+                <b style="color:powderblue;">|</b> Skills
             </div>
         </div>
         <div class="row d-flex justify-content-center px-md-0 py-md-3" style="background:rgba(128, 128, 128, 0.438); border:2px solid #000000;">
             <div class="col-md-1 mx-4 my-4 mx-md-0 my-md-2 icon d-flex justify-content-center" *ngFor="let language of languages">
                 <img class="{{language.class}}" src="../../../assets/icons/{{language.name}}.png" alt="icon">
             </div>
+            <span #projectSectionMobile class="d-block d-md-none"></span>
         </div>
     </div>
     <!--end mobile-->
     <!--desktop-->
     <div class="d-none d-md-block skills pb-md-5 mt-4 mt-md-0">
-        <div class="d-flex justify-content-center">
-            <div class="titleText text-center">
-                Skills
+        <div class="d-flex">
+            <div class="titleText">
+                <b style="color:powderblue;">|</b> Skills
             </div>
         </div>
         <div class="row d-flex justify-content-center px-md-0 py-md-3" style="background:rgba(128, 128, 128, 0.438); border:2px solid #000000;">
             <div class="col-md-1 mx-4 my-4 mx-md-0 my-md-2 icon d-flex justify-content-center" *ngFor="let language of languages">
                 <img class="{{language.class}}" src="../../../assets/icons/{{language.name}}.png" alt="icon">
+                <span #projectSection></span>
             </div>
         </div>
     </div>

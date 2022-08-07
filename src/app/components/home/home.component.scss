@@ -20,10 +20,6 @@
     letter-spacing: 1.3px;
 }
 
-.mobile-section-two {
-    visibility: hidden;
-}
-
 .mobile-section-skills {
     visibility: hidden;
 }
@@ -205,14 +201,6 @@
         width: 80%;
     }
 
-    .mobile-section-two {
-        display: none;
-    }
-
-    .mobile-section-skills {
-        display: none;
-    }
-
 }
 
 @media (min-width: 992px) {
@@ -232,6 +220,12 @@
 
     .custom-container {
         width: 1600px;
+    }
+
+    .titleText {
+        font-size: 70px;
+        color: lightgrey;
+        letter-spacing: 2px;
     }
 
     .bodyText {
