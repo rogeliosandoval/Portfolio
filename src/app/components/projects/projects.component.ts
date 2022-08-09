@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'projects',
@@ -7,5 +7,35 @@ import { Component } from "@angular/core";
 })
 
 export class Projects {
+    @Input() showYthi = false;
+    @Input() showAction = false;
+    @Input() showSoundbox = false;
+    @Input() showMapbox = false;
+    @Input() showTodo = false;
+    @Input() showHopper = false;
+
+    triggerYthi() {
+        this.showYthi = true;
+    }
+
+    triggerAction() {
+        this.showAction = true;
+    }
+
+    triggerSoundbox() {
+        this.showSoundbox = true;
+    }
+
+    triggerMapbox() {
+        this.showMapbox = true;
+    }
+
+    triggerTodo() {
+        this.showTodo = true;
+    }
+
+    triggerHopper() {
+        this.showHopper = true;
+    }
 
 }

@@ -1,73 +1,348 @@
-<div class="custom-container">
+<div class="custom-container mt-2">
+    <div class="title-right text-right" style="visibility:hidden;" *ngIf="!showYthi">
+        <div class="titleText">
+            Projects <b style="color:powderblue;">|</b> 
+        </div>
+    </div>
+    <div class="title-right text-right" *ngIf="showYthi">
+        <div class="titleText">
+            Projects <b style="color:powderblue;">|</b> 
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-6">
+        <!--ghost ythi-->
+        <div class="col-md-6 ythi" style="visibility:hidden;" *ngIf="!showYthi" (appear)="triggerYthi()">
             <div class="blog-grid">
                 <div class="blog-img-ythi">
                     <div class="date">
                         <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
-                        <img class="html icon ml-3" src="../../../assets/icons/html.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/javascript.png" alt="icon">
-                        <img class="css icon ml-3" src="../../../assets/icons/css.png" alt="icon">
-                        <img class="bootstrap icon ml-3" src="../../../assets/icons/bootstrap.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/typescript.png" alt="icon">
                     </div>
                 </div>
                 <div class="blog-info">
-                    <h3><a href="#">Your Time Home Inspections</a></h3>
+                    <h3>Your Time Home Inspections</h3>
                     <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
                     <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a smooth experience.</p>
                     <div class="btn-bar">
-                        <button class="button-50" style="color:white;">Live Demo</button>
-                        <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        <a href="https://your-time-home-inspections.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/YTHI-Website-Two" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <!--the real ythi-->
+        <div class="col-md-6 ythi" *ngIf="showYthi">
+            <div class="blog-grid">
+                <div class="blog-img-ythi">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/typescript.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Your Time Home Inspections</h3>
+                    <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a smooth experience.</p>
+                    <div class="btn-bar">
+                        <a href="https://your-time-home-inspections.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/YTHI-Website-Two" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ghost action-->
+        <div class="col-md-6 action" style="visibility:hidden;" *ngIf="!showAction" (appear)="triggerAction()">
             <div class="blog-grid">
                 <div class="blog-img-action">
                     <div class="date">
                         <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
-                        <img class="html icon ml-3" src="../../../assets/icons/html.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/javascript.png" alt="icon">
-                        <img class="css icon ml-3" src="../../../assets/icons/css.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/scss.png" alt="icon">
-                        <img class="bootstrap icon ml-3" src="../../../assets/icons/bootstrap.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/scss.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/photoshop.png" alt="icon">
                     </div>
                 </div>
                 <div class="blog-info">
-                    <h3><a href="#">Action 6</a></h3>
-                    <p>An application with some javascript games to pass the time by when boredom hits. A call to a "bored" API is also provided to give the user ideas on what else to do.</p>
+                    <h3>Action 6</h3>
+                    <p>An application with some javascript games to pass the time when boredom hits. A call to a "bored" API is also provided to give the user ideas on what else to do.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
                     <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games.</p>
                     <div class="btn-bar">
-                        <button class="button-50" style="color:white;">Live Demo</button>
-                        <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        <a href="https://action-six.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Action-Six" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <!--the real action-->
+        <div class="col-md-6 action" *ngIf="showAction">
+            <div class="blog-grid">
+                <div class="blog-img-action">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/scss.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/photoshop.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Action 6</h3>
+                    <p>An application with some javascript games to pass the time when boredom hits. A call to a "bored" API is also provided to give the user ideas on what else to do.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games.</p>
+                    <div class="btn-bar">
+                        <a href="https://action-six.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Action-Six" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ghost soundbox-->
+        <div class="col-md-6 soundbox" style="visibility:hidden;" *ngIf="!showSoundbox" (appear)="triggerSoundbox()">
             <div class="blog-grid">
                 <div class="blog-img-sound">
                     <div class="date">
                         <img class="icon" src="../../../assets/icons/svelte.png" alt="icon">
-                        <img class="html icon ml-3" src="../../../assets/icons/html.png" alt="icon">
-                        <img class="icon ml-3" src="../../../assets/icons/javascript.png" alt="icon">
-                        <img class="css icon ml-3" src="../../../assets/icons/css.png" alt="icon">
-                        <img class="bootstrap icon ml-3" src="../../../assets/icons/tailwind.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/tailwind.png" alt="icon">
                     </div>
                 </div>
                 <div class="blog-info">
-                    <h3><a href="#">Sound Box</a></h3>
+                    <h3>Sound Box</h3>
                     <p>A simple application that allows users to create different kinds of sounds/beats and share their creations with others.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
                     <p class="ml-2">BOM/DOM manipulation, event listeners, binding children to parents and a bigger dive into the tailwind styling framework. A great opportunity to see how easy Svelte makes jobs like this as well.</p>
                     <div class="btn-bar">
-                        <button class="button-50" style="color:white;">Live Demo</button>
-                        <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        <a href="https://sound-box-96.netlify.app/" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Sound-Box" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--the real soundbox-->
+        <div class="col-md-6 soundbox" *ngIf="showSoundbox">
+            <div class="blog-grid">
+                <div class="blog-img-sound">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/svelte.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/tailwind.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Sound Box</h3>
+                    <p>A simple application that allows users to create different kinds of sounds/beats and share their creations with others.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">BOM/DOM manipulation, event listeners, binding children to parents and a bigger dive into the tailwind styling framework. A great opportunity to see how easy Svelte makes jobs like this as well.</p>
+                    <div class="btn-bar">
+                        <a href="https://sound-box-96.netlify.app/" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Sound-Box" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ghost mapbox-->
+        <div class="col-md-6 mapbox" style="visibility:hidden;" *ngIf="!showMapbox" (appear)="triggerMapbox()">
+            <div class="blog-grid">
+                <div class="blog-img-map">
+                    <div class="date">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Sound Box</h3>
+                    <p>A simple application that allows users to create different kinds of sounds/beats and share their creations with others.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">BOM/DOM manipulation, event listeners, binding children to parents and a bigger dive into the tailwind styling framework. A great opportunity to see how easy Svelte makes jobs like this as well.</p>
+                    <div class="btn-bar">
+                        <a href="https://open-weather-api-project.vercel.app/" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/OpenWeather-API-Project" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--the real mapbox-->
+        <div class="col-md-6 mapbox" *ngIf="showMapbox">
+            <div class="blog-grid">
+                <div class="blog-img-map">
+                    <div class="date">
+                        <img class="html icon ml-1" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>5 Day Forecast</h3>
+                    <p>A simple weather application that allows the user to check what the weather is like anywhere in the world. A 5 day forecast will be shown once a destination is chosen. Moving the marker will also show the weather in that specific area as well.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">Made with vanilla javascript, I learned how to integrate the mapbox API to utilize all of its properties. Pumping content into the DOM with string literals to create the elements that are shown.</p>
+                    <div class="btn-bar">
+                        <a href="https://open-weather-api-project.vercel.app/" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/OpenWeather-API-Project" target="_blank" style="text-decoration:none;">
+                            <button class="ml-md-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title-left text-left" *ngIf="showTodo">
+        <div class="titleText">
+            <b style="color:powderblue;">|</b> Honorable Mentions <i class="smalltext d-none d-md-inline">projects</i> 
+        </div>
+    </div>
+    <div class="row">
+        <!--ghost todo-->
+        <div class="col-md-6 todo" style="visibility:hidden;" *ngIf="!showTodo" (appear)="triggerTodo()">
+            <div class="blog-grid">
+                <div class="blog-img-todo">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/react.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Todo List Application</h3>
+                    <p>A simple todo list application made with React.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">The main purpose of this project was to familiarize myself with React. One of my first projects and one that every developer should have.</p>
+                    <div class="btn-bar">
+                        <a href="https://github.com/rogeliosandoval/React-Todo-App" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--the real todo-->
+        <div class="col-md-6 todo" *ngIf="showTodo">
+            <div class="blog-grid">
+                <div class="blog-img-todo">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/react.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Todo List Application</h3>
+                    <p>A simple todo list application made with React.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">The main purpose of this project was to familiarize myself with React. One of my first projects and one that every developer should have.</p>
+                    <div class="btn-bar">
+                        <a href="https://github.com/rogeliosandoval/React-Todo-App" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ghost hopper-->
+        <div class="col-md-6 hopper" style="visibility:hidden;" *ngIf="!showHopper" (appear)="triggerHopper()">
+            <div class="col-md-6 hopper" *ngIf="showHopper">
+                <div class="blog-grid">
+                    <div class="blog-img-hopper">
+                        <div class="date">
+                            <img class="icon" src="../../../assets/icons/svelte.png" alt="icon">
+                            <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                            <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                            <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                            <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/tailwind.png" alt="icon">
+                            <img class="icon ml-2 ml-md-3" src="../../../assets/icons/photoshop.png" alt="icon">
+                        </div>
+                    </div>
+                    <div class="blog-info">
+                        <h3>Hopper Services</h3>
+                        <p>A static website for a made up lawn care company. Users would theoretically be able to schedule appointments for trimmings, planting and other services.</p>
+                        <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                        <p class="ml-2">How to let parent components talk to child components and vise versa with Svelte. The purpose of this project was to focus solely on responsivness utilizing Tailwind's built in media queries.</p>
+                        <div class="btn-bar">
+                            <a href="https://github.com/rogeliosandoval/Practice-Website" target="_blank" style="text-decoration: none;">
+                                <button class="button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--the real hopper-->
+        <div class="col-md-6 hopper" *ngIf="showHopper">
+            <div class="blog-grid">
+                <div class="blog-img-hopper">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/svelte.png" alt="icon">
+                        <img class="html icon ml-2 ml-md-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-md-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-md-3" src="../../../assets/icons/tailwind.png" alt="icon">
+                        <img class="icon ml-2 ml-md-3" src="../../../assets/icons/photoshop.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Hopper Services</h3>
+                    <p>A static website for a made up lawn care company. Users would theoretically be able to schedule appointments for trimmings, planting and other services.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">How to let parent components talk to child components and vise versa with Svelte. The purpose of this project was to focus solely on responsivness utilizing Tailwind's built in media queries.</p>
+                    <div class="btn-bar">
+                        <a href="https://github.com/rogeliosandoval/Practice-Website" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
                     </div>
                 </div>
             </div>
