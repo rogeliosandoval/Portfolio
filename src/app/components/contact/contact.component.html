@@ -75,7 +75,7 @@
         
                 <div class="form-panel">
                     <div class="form-row">
-                        <input type="text" formControlName="Name" placeholder="Name" [ngClass]="{'invalid' : Name && Name.invalid && Name.touched, 'valid' : Name && Name.valid && Name.touched}">
+                        <input type="text" name="Name" formControlName="Name" placeholder="Name" [ngClass]="{'invalid' : Name && Name.invalid && Name.touched, 'valid' : Name && Name.valid && Name.touched}">
                         <br>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
         
                 <div class="form-panel">
                     <div class="form-row">
-                        <input type="email" formControlName="Email" placeholder="Email Address" [ngClass]="{'invalid' : Email && Email.invalid && Email.touched, 'valid' : Email && Email.valid && Email.touched}">
+                        <input type="email" name="Email" formControlName="Email" placeholder="Email Address" [ngClass]="{'invalid' : Email && Email.invalid && Email.touched, 'valid' : Email && Email.valid && Email.touched}">
                         <br>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                 </div>
         
                 <div class="form-row">
-                    <textarea id="w3review" formControlName="Message" rows="4" cols="20" placeholder="Message" style="height: 155px !important;" [ngClass]="{'invalid' : Message && Message.invalid && Message.touched, 'valid' : Message && Message.valid && Message.touched}"></textarea>
+                    <textarea id="w3review" name="Message" formControlName="Message" rows="4" cols="20" placeholder="Message" style="height: 155px !important;" [ngClass]="{'invalid' : Message && Message.invalid && Message.touched, 'valid' : Message && Message.valid && Message.touched}"></textarea>
                     <br>
                 </div>
                 <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Message && Message.invalid && Message.touched}">

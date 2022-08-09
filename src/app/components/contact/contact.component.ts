@@ -1,6 +1,8 @@
 import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+
 
 @Component({
     selector: 'ngbd-modal-content',
@@ -32,7 +34,11 @@ export class Contact {
     @ViewChild('contactMe', { static: false }) contactMe!: ElementRef;
     @Input() showMessage = false;
 
-    constructor(private modalService: NgbModal) {}
+    // Form state
+    loading = false;
+    success = false;
+
+    constructor(private modalService: NgbModal, private db: AngularFireDatabase) {}
 
     contactForm = new FormGroup({
         Name: new FormControl('', [Validators.required, Validators.maxLength(50), Validators.pattern('^[a-zA-Z ]*$')]),
@@ -53,8 +59,11 @@ export class Contact {
     }
 
     onSubmit() {
+        const ref = this.db.list("messages");
+        ref.push(this.contactForm.value).then((response) => {
+            (response);
+        }).catch((error) => {(error)});
         this.modalService.open(NgbdModalContent);
-        console.log(this.contactForm.value);
         this.contactForm.reset();
     }
 
