@@ -1,22 +1,109 @@
-<div class="custom-container my-1 my-md-3">
-    <div class="text-center">
-        <a href="">
+<div class="socials d-none d-md-block">
+    <a href="https://www.linkedin.com/in/rogeliosandoval/" target="_blank" style="text-decoration: none;">
+        <i class="icon fa fa-linkedin-square m-2"></i>
+    </a>
+    <br>
+    <a href="https://github.com/rogeliosandoval" target="_blank" style="text-decoration: none;">
+        <i class="icon fa fa-github-square m-2"></i>
+    </a>
+</div>
+<!--mobile nav-->
+<div class="mobile-nav d-block d-md-none" [ngClass]="{fadeInNav: mobileShow}" [ngClass]="{hiddenNav: hiddenNav}">
+    <div class="row">
+        <div class="col-8 my-auto">
+            <p class="text-center" style="color: lightgrey; font-size:36px;">
+                Rogelio G Sandoval III
+            </p>
+        </div>
+        <div class="col-4 my-auto">
+            <p class="text-center">
+                <a *ngIf="!navToggle" type="button" data-toggle="collapse" data-target="#collapseTheNav">
+                    <i class="fa fa-toggle-down" style="font-size:60px;" (click)="toggle()"></i>
+                </a>
+                <a *ngIf="navToggle" type="button" data-toggle="collapse" data-target="#collapseTheNav">
+                    <i class="fa fa-toggle-up" style="font-size:60px; color:powderblue;" (click)="toggle()"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="collapse text-center" id="collapseTheNav">
+        <div data-toggle="collapse" data-target="#collapseTheNav" (click)="toggle()" (click)="scrollToTheTop()">
+            <div class="nav-link">
+                About Me
+            </div>
+        </div>
+        <div data-toggle="collapse" data-target="#collapseTheNav" (click)="toggle()" (click)="scrollRef(home.projectSectionMobile)">
+            <div class="nav-link">
+                Projects
+            </div>
+        </div>
+        <div data-toggle="collapse" data-target="#collapseTheNav" (click)="toggle()" (click)="scroll(contactMe)">
+            <div class="nav-link">
+                Contact
+            </div>
+        </div>
+        <div data-toggle="collapse" data-target="#collapseTheNav" (click)="toggle()">
+            <div class="nav-link">
+                <a href="../assets/Rogelio_Sandoval_Resume.pdf" target="_blank" style="text-decoration:none; color:powderblue;">
+                    Resume
+                </a>
+            </div>
+        </div>
+        <a href="https://github.com/rogeliosandoval" target="_blank" style="text-decoration: none;">
             <i class="icon fa fa-github-square m-2"></i>
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/rogeliosandoval/" target="_blank" style="text-decoration: none;">
             <i class="icon fa fa-linkedin-square m-2"></i>
         </a>
     </div>
-    <div class="titleText text-center">
-        Rogelio G. Sandoval III
-    </div>
-    <div class="text-center my-3">
-        <button routerLink="/home" class="button-50 mx-2 mx-md-3 my-2 my-md-0" role="button" [ngClass]="{active: homeActive}" (click)="home()">About Me</button>
-        <button routerLink="/projects" class="button-50 mx-2 mx-md-3 my-2 my-md-0" role="button" [ngClass]="{active: projectsActive}" (click)="projects()">Projects</button>
-        <button class="button-50 mx-2 mx-md-3 my-2 my-md-0" role="button" [ngClass]="{active: contactActive}" (click)="contact()">Contact</button>
-        <a href="../assets/Rogelio_Sandoval_Resume.pdf" target="_blank">
-            <button class="button-50 mx-2 mx-md-3 my-2 my-md-0" role="button" style="background:powderblue; color:black">Resume</button>
-        </a>
+</div>
+
+<!--desktop nav-->
+<div class="navigation" [ngClass]="{navMorph: navMorph}">
+    <div class="custom-container my-1 my-md-0">
+        <div class="text-center d-block d-md-none">
+            <a href="https://github.com/rogeliosandoval" target="_blank" style="text-decoration: none;">
+                <i class="icon fa fa-github-square m-2"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rogeliosandoval/" target="_blank" style="text-decoration: none;">
+                <i class="icon fa fa-linkedin-square m-2"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-5 my-auto">
+                <div class="titleText text-center">
+                    Rogelio G. Sandoval III
+                </div>
+            </div>
+            <div class="col-md-7 my-auto">
+                <div class="text-center my-3">
+                    <!--desktop buttons-->
+                    <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 mx-xl-3 my-md-2 d-none d-md-inline" role="button" [ngClass]="{active: homeActive}" (click)="scrollToTheTop()" >About Me</button>
+                    <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-2 d-none d-md-inline" role="button" [ngClass]="{active: projectsActive}" (click)="scrollRef(home.projectSection)">Projects</button>
+                    <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-2 d-none d-md-inline" role="button" [ngClass]="{active: contactActive}" (click)="scroll(contactMe)">Contact</button>
+                    <a href="../assets/Rogelio_Sandoval_Resume.pdf" target="_blank" style="text-decoration:none;">
+                        <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-2 my-xl-4 d-none d-md-inline" role="button" style="background:powderblue; color:black">Resume</button>
+                    </a>
+
+                    <!--mobile buttons-->
+                    <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-0 d-inline d-md-none" role="button" [ngClass]="{active: projectsActive}" (click)="scrollRef(home.projectSectionMobile)">Projects</button>
+                    <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-0 d-inline d-md-none" role="button" [ngClass]="{active: contactActive}" (click)="scroll(contactMe)">Contact</button>
+                    <a href="../assets/Rogelio_Sandoval_Resume.pdf" target="_blank" style="text-decoration:none;">
+                        <button class="button-50 mx-2 mx-md-2 mx-xl-3 my-2 my-md-0 my-xl-4 d-inline d-md-none" role="button" style="background:powderblue; color:black">Resume</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<router-outlet></router-outlet>
+<div class="body">
+    <home #home></home>
+    <projects [showYthi]="boolean" [showAction]="boolean" [showSoundbox]="boolean" [showMapbox]="boolean" [showTodo]="boolean" [showHopper]="boolean"></projects>
+    <contact [showMessage]="boolean"></contact>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="bodyText my-3" style="font-size:24px; opacity:0.7;">
+        © 2022 Copyright: Rojaa
+    </div>
+</div>
+<span #contactMe></span>

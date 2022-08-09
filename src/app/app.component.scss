@@ -4,10 +4,14 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    -webkit-animation: fadeIn 3s forwards, slideDown 2s forwards;
+    -moz-animation: fadeIn 3s forwards, slideDown 2s forwards;
+    animation: fadeIn 3s forwards, slideDown 2s forwards;
+    z-index: 2;
 } 
 
 .titleText {
-    font-size: 45px;
+    font-size: 47px;
     color: lightgrey;
     letter-spacing: 2px;
 }
@@ -49,11 +53,6 @@
   text-decoration: none;
 }
 
-.button-50:hover {
-    color: powderblue;
-  text-decoration: none;
-}
-
 .button-50:active {
   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
   outline: 0;
@@ -71,8 +70,8 @@
 }
 
 .icon {
-    color: gainsboro;
-    font-size: 45px;
+    color: lightgrey;
+    font-size: 60px;
 }
 
 .icon:hover {
@@ -87,6 +86,156 @@
 .pdf {
     width: 20px;
     height: 20px;
+}
+
+//mobile nav style
+.mobile-nav {
+    position:fixed;
+    top:0;
+    width: 100%;
+    padding-top: 10px;
+    background:rgb(73, 73, 73);
+    -webkit-animation: fadeOut 1s forwards, slideUp 2s forwards;
+    -moz-animation: fadeOut 1s forwards, slideUp 2s forwards;
+    animation: fadeOut 1s forwards, slideUp 2s forwards;
+    z-index: 2
+}
+
+.fadeInNav {
+    -webkit-animation: fadeIn 1s forwards, slideDown 2s forwards !important;
+    -moz-animation: fadeIn 1s forwards, slideDown 2s forwards !important;
+    animation: fadeIn 1s forwards, slideDown 2s forwards !important;
+}
+
+.hiddenNav {
+    visibility: hidden;
+}
+
+.nav-link {
+    color: lightgrey;
+    font-size: 34px;
+    padding: 18px;
+    background:black;
+}
+//end of mobile nav style
+
+//slides down from the top
+@-webkit-keyframes slideDown {
+    0% {
+      transform: translateY(-900px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slideDown {
+    0% {
+      transform: translateY(-900px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+
+}
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-900px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+//slides up from the bottom
+@-webkit-keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-900px);
+    }
+}
+
+@-moz-keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-900px);
+    }
+
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-900px);
+    }
+}
+
+//slides from the right
+@-webkit-keyframes slideInRight {
+    0% {
+      transform: translateX(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideInRight {
+    0% {
+      transform: translateX(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+
+}
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+//fades in
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+//fades out
+@-webkit-keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 @media (min-width: 576px) {
@@ -109,18 +258,52 @@
     }
 
     .icon {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .button-50 {
-        padding: 12px 50px;
+        padding: 10px 0px;
+        width: 115px;
     }
 
     .custom-container {
         width: 720px;
     }
 
+    .socials {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 3;
+        -webkit-animation: fadeIn 3s forwards, slideInRight 2s forwards;
+        -moz-animation: fadeIn 3s forwards, slideInRight 2s forwards;
+        animation: fadeIn 3s forwards, slideInRight 2s forwards;
+    }
+
+    .navigation {
+        width: 100%;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.4s;
+        z-index: 2;
+    }
+
+    .navMorph {
+        background:rgba(49, 49, 49, 0.842);
+    }
+
+    .body {
+        padding-top: 120px;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
 }
+
 
 @media (min-width: 992px) {
     .custom-container {
@@ -156,5 +339,16 @@
         padding: 20px 58px;
     }
 
+    .navigation {
+        position: fixed;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .body {
+        padding-top: 155px;
+    }
 
 }
