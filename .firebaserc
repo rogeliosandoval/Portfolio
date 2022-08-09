@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rogelio-portfolio": {
+      "hosting": {
+        "portfolio": [
+          "rogelio-portfolio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rogelio-portfolio"
+  }
+}
