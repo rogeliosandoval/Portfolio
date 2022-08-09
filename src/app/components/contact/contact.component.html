@@ -1,0 +1,124 @@
+<div class="custom-container">
+    <div class="message titleText my-3" style="visibility:hidden;" *ngIf="!showMessage">
+        <span style="color:powderblue; font-weight:bold;">|</span> Send Me A Message
+    </div>
+    <div class="message titleText my-3" *ngIf="showMessage">
+        <span style="color:powderblue; font-weight:bold;">|</span> Send Me A Message
+    </div>
+    <div class="row" (appear)="triggerMessage()">
+        <!--ghost-->
+        <div class="col-md-6 my-auto message" style="visibility:hidden;" *ngIf="!showMessage">
+            <div class="d-flex justify-content-center">
+                <img class="mail" src="../../../assets/mail.png" alt="mail">
+            </div>
+        </div>
+        <!--real-->
+        <div class="col-md-6 my-auto message" *ngIf="showMessage">
+            <div class="d-flex justify-content-center">
+                <img class="mail" src="../../../assets/mail.png" alt="mail">
+            </div>
+        </div>
+        <!--ghost-->
+        <div class="col-md-6 my-auto inputs" style="visibility:hidden;" *ngIf="!showMessage">
+            <form [formGroup]="contactForm">
+        
+                <div class="form-panel">
+                    <div class="form-row">
+                        <input type="text" formControlName="Name" placeholder="Name" [ngClass]="{'invalid' : Name && Name.invalid && Name.touched, 'valid' : Name && Name.valid && Name.touched}">
+                        <br>
+                    </div>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Name && Name.invalid && Name.touched}">
+                    Please enter a name
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Name && Name.invalid && Name.touched}">
+                    Please enter a name
+                </div>
+        
+                <div class="form-panel">
+                    <div class="form-row">
+                        <input type="email" formControlName="Email" placeholder="Email Address" [ngClass]="{'invalid' : Email && Email.invalid && Email.touched, 'valid' : Email && Email.valid && Email.touched}">
+                        <br>
+                    </div>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Email && Email.invalid && Email.touched}">
+                    Please enter a valid email
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Email && Email.invalid && Email.touched}">
+                    Please enter a valid email
+                </div>
+        
+                <div class="form-row">
+                    <textarea id="w3review" formControlName="Message" rows="4" cols="20" placeholder="Message" style="height: 155px !important;" [ngClass]="{'invalid' : Message && Message.invalid && Message.touched, 'valid' : Message && Message.valid && Message.touched}"></textarea>
+                    <br>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Message && Message.invalid && Message.touched}">
+                    Please enter a message
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Message && Message.invalid && Message.touched}">
+                    Please enter a message
+                </div>
+        
+            </form>
+            <div class="d-flex justify-content-center my-3">
+                <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
+                    Send
+                </button>
+                <button class="button-502" role="button" *ngIf="contactForm.invalid">
+                    Send
+                </button>
+            </div>
+        </div>
+        <!--real-->
+        <div class="col-md-6 my-auto inputs" *ngIf="showMessage">
+            <form [formGroup]="contactForm">
+        
+                <div class="form-panel">
+                    <div class="form-row">
+                        <input type="text" formControlName="Name" placeholder="Name" [ngClass]="{'invalid' : Name && Name.invalid && Name.touched, 'valid' : Name && Name.valid && Name.touched}">
+                        <br>
+                    </div>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Name && Name.invalid && Name.touched}">
+                    Please enter a name
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Name && Name.invalid && Name.touched}">
+                    Please enter a name
+                </div>
+        
+                <div class="form-panel">
+                    <div class="form-row">
+                        <input type="email" formControlName="Email" placeholder="Email Address" [ngClass]="{'invalid' : Email && Email.invalid && Email.touched, 'valid' : Email && Email.valid && Email.touched}">
+                        <br>
+                    </div>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Email && Email.invalid && Email.touched}">
+                    Please enter a valid email
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Email && Email.invalid && Email.touched}">
+                    Please enter a valid email
+                </div>
+        
+                <div class="form-row">
+                    <textarea id="w3review" formControlName="Message" rows="4" cols="20" placeholder="Message" style="height: 155px !important;" [ngClass]="{'invalid' : Message && Message.invalid && Message.touched, 'valid' : Message && Message.valid && Message.touched}"></textarea>
+                    <br>
+                </div>
+                <div class="d-md-none small-text" style="color:red; display:none;" [ngClass]="{'mobile-show' : Message && Message.invalid && Message.touched}">
+                    Please enter a message
+                </div>
+                <div class="d-none d-md-block text-center big-text" style="color:red; visibility:hidden;" [ngClass]="{'show' : Message && Message.invalid && Message.touched}">
+                    Please enter a message
+                </div>
+        
+            </form>
+            <div class="d-flex justify-content-center my-3">
+                <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
+                    Send
+                </button>
+                <button class="button-502" role="button" *ngIf="contactForm.invalid">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
