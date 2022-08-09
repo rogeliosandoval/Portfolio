@@ -30,11 +30,11 @@ export class Home {
 
     @HostListener('window:scroll', ['$event']) onViewPortScroll() {
         //mobile show mission statement
-        if (window.pageYOffset > 45) {
+        if (window.pageYOffset > 235) {
             this.two = true;
         }
         //mobile show skills
-        if (window.pageYOffset > 650) {
+        if (window.pageYOffset > 780) {
             this.skills = true;
         }
     }
