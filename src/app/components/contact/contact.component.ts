@@ -61,10 +61,10 @@ export class Contact {
     onSubmit() {
         const ref = this.db.list("messages");
         ref.push(this.contactForm.value).then((response) => {
+            this.modalService.open(NgbdModalContent);
+            this.contactForm.reset();
             (response);
         }).catch((error) => {(error)});
-        this.modalService.open(NgbdModalContent);
-        this.contactForm.reset();
     }
 
     triggerMessage() {

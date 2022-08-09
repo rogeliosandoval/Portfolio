@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  firebaseConfig: {
+  firebase: {
     apiKey: "AIzaSyAdv5ksXKi2SLqsmyOHFSAl5aA2ZScwJAA",
     authDomain: "rogelio-portfolio.firebaseapp.com",
     databaseURL: "https://rogelio-portfolio-default-rtdb.firebaseio.com",
