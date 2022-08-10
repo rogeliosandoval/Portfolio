@@ -12,7 +12,7 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" width="60px;"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="60px;"/> 
 <br>
-<br>Nothing more than my own personal portfolio, I had a lot of fun making this one. Another great opportunity for me to play around with my creativity. basic transitions and UI. Thank you for viewing!
+<br>Nothing more than my own personal portfolio, I had a lot of fun making this one. Another great opportunity for me to play around with my creativity, basic transitions and UI. Thank you for viewing!
 <br>
 <br>
 <img src="portfolio.jpg" alt="wide-Screen1" border="0">
