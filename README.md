@@ -15,4 +15,4 @@
 <br>Nothing more than my own personal portfolio, I had a lot of fun making this one. Another great opportunity for me to play around with creativity, basic transitions and UI. Thank you for viewing!
 <br>
 <br>
-<img src="portfolio-image.jpg" alt="portfolio" border="0">
+<img src="portfolio-image.jpg" alt="portfolio">
