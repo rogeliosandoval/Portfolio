@@ -112,6 +112,8 @@ export class Contact {
             console.warn(error.responseText);
             console.log({error});
         })
+        const ref = this.db.list("messages");
+        ref.push(this.contactForm.value);
     }
 
     //For testing
