@@ -7,13 +7,13 @@
     </div>
     <div class="row" (appear)="triggerMessage()">
         <!--ghost-->
-        <div class="col-md-6 my-auto message" style="visibility:hidden;" *ngIf="!showMessage">
+        <div class="col-md-6 m5-auto message" style="visibility:hidden;" *ngIf="!showMessage">
             <div class="d-flex justify-content-center">
                 <img class="mail" src="../../../assets/mail.png" alt="mail">
             </div>
         </div>
         <!--real-->
-        <div class="col-md-6 my-auto message" *ngIf="showMessage">
+        <div class="col-md-6 my-5 message" *ngIf="showMessage">
             <div class="d-flex justify-content-center">
                 <img class="mail" src="../../../assets/mail.png" alt="mail">
             </div>
@@ -71,7 +71,15 @@
         </div>
         <!--real-->
         <div class="col-md-6 my-auto inputs" *ngIf="showMessage">
-            <form [formGroup]="contactForm">
+            <div class="sent my-5 py-5" *ngIf="!showForm">
+                <div class="d-flex justify-content-center my-3">
+                    <img style="width:100px; filter:grayscale(0.5);" src="../../../assets/green-check.png" alt="success">
+                </div>
+                <div class="text-center bodyText">
+                    Thank You!
+                </div>
+            </div>
+            <form [formGroup]="contactForm" *ngIf="showForm">
         
                 <div class="form-panel">
                     <div class="form-row">
@@ -111,13 +119,20 @@
                 </div>
         
             </form>
-            <div class="d-flex justify-content-center my-3">
-                <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
-                    Send
-                </button>
-                <button class="button-502" role="button" *ngIf="contactForm.invalid">
-                    Send
-                </button>
+            <div class="d-flex justify-content-center my-3" *ngIf="showForm">
+                <div class="all-buttons" *ngIf="allButtons">
+                    <div class="send-buttons" *ngIf="!showLoad">
+                        <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
+                            Send
+                        </button>
+                        <button class="button-502" role="button" *ngIf="contactForm.invalid">
+                            Send
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <img class="loading mb-5" src="../../../assets/loading.gif" alt="loading" *ngIf="showLoad">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

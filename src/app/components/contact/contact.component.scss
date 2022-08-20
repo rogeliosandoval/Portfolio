@@ -49,34 +49,34 @@ outline: none;
 }
 
 .button-502 {
-    appearance: button;
-    background-color: black;
-    background-image: none;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
-    box-sizing: border-box;
-    color: gainsboro;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 5px 10px 0;
-    width: 100%;
-    overflow: visible;
-    padding: 12px 40px;
-    text-align: center;
-    text-transform: none;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    outline: none;
-    cursor: not-allowed;
-    opacity: 0.5;
-    filter: grayscale(1);
+  appearance: button;
+  background-color: black;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: gainsboro;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  width: 100%;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(1);
 }
 
 .button-50:focus {
@@ -99,7 +99,11 @@ transform: translate(2px, 2px);
 }
 
 .mail {
-    width: 40%;
+  width: 40%;
+}
+
+.all-buttons {
+  width: 100%;
 }
 
 input[type="text"],
@@ -149,107 +153,117 @@ textarea {
 }
 
 .small-text {
-    font-size: 23px;
+  font-size: 23px;
+}
+
+.loading {
+  width:30%;
 }
 
 //slides from the bottom
 @-webkit-keyframes slideInBottom {
-    0% {
-      transform: translateY(900px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
   
 @-moz-keyframes slideInBottom {
-    0% {
-      transform: translateY(900px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
   
 @keyframes slideInBottom {
-    0% {
-      transform: translateY(900px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
   
 //slides from the right
 @-webkit-keyframes slideInRight {
-    0% {
-      transform: translateX(900px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 @-moz-keyframes slideInRight {
-    0% {
-      transform: translateX(900px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 @keyframes slideInRight {
-    0% {
-      transform: translateX(900px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 //slides from the left
 @-webkit-keyframes slideInLeft {
-    0% {
-      transform: translateX(-400px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 @-moz-keyframes slideInLeft {
-    0% {
-      transform: translateX(-400px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 @keyframes slideInLeft {
-    0% {
-      transform: translateX(-400px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
   
 //fades in
 @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
   
 @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
   
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.sent {
+  -webkit-animation: fadeIn 5s forwards;
+  -moz-animation: fadeIn 5s forwards;
+  animation: fadeIn 5s forwards;
 }
 
 .message {
@@ -258,94 +272,102 @@ textarea {
   animation: fadeIn 5s forwards, slideInLeft 2s forwards;
 }
 
-.inputs {
+.inputs{
   -webkit-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   -moz-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   animation: fadeIn 5s forwards, slideInRight 2s forwards;
 }
   
 @media (min-width: 576px) {
-    .custom-container {
-      width: 540px;
-    }
+  .custom-container {
+    width: 540px;
+  }
 }
   
 @media (min-width: 768px) {
-    .custom-container {
-      width: 720px;
-    }
-  
-    .button-50, .button-502 {
-      width: 150px;
-    }
+  .custom-container {
+    width: 720px;
+  }
 
-    .mobile-show {
-        display: none !important;
-    }
+  .button-50, .button-502 {
+    width: 150px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-        font-size: 25px;
-        height: 40px;
-    }
+  .mobile-show {
+    display: none !important;
+  }
 
-    .big-text {
-        font-size: 21px;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    font-size: 25px;
+    height: 40px;
+  }
+
+  .big-text {
+    font-size: 21px;
+  }
+
+  .all-buttons {
+    width: auto;
+  }
+
+  .loading {
+    width:120px;
+  }
 }
   
 @media (min-width: 992px) {
-    .custom-container {
-      width: 960px;
-    }
+  .custom-container {
+    width: 960px;
+  }
 }
   
 @media (min-width: 1200px) {
-    .custom-container {
-      width: 1140px;
-    }
+  .custom-container {
+    width: 1140px;
+  }
 }
   
   
 @media (min-width: 1500px) {
   
-    .custom-container {
-      width: 1600px;
-    }
-  
-    .titleText {
-      font-size: 70px;
-      color: lightgrey;
-      letter-spacing: 2px;
-    }
-  
-    .bodyText {
-      font-size: 39px;
-      color: lightgrey;
-      line-height: 40px;
-      letter-spacing: 1.3px;
-    }
-  
-    .button-50, .button-502 {
-      font-size: 30px;
-      width: 175px;
-      padding: 12px 40px;
-    }
+  .custom-container {
+    width: 1600px;
+  }
 
-    .big-text {
-        font-size: 28px;
-    }
+  .titleText {
+    font-size: 70px;
+    color: lightgrey;
+    letter-spacing: 2px;
+  }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-        font-size: 30px;
-        font-size: 30px;
-        padding: 7px 20px;
-        height: 45px;
-    }
+  .bodyText {
+    font-size: 39px;
+    color: lightgrey;
+    line-height: 40px;
+    letter-spacing: 1.3px;
+  }
+
+  .button-50, .button-502 {
+    font-size: 30px;
+    width: 175px;
+    padding: 12px 40px;
+  }
+
+  .big-text {
+    font-size: 28px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    font-size: 30px;
+    font-size: 30px;
+    padding: 7px 20px;
+    height: 45px;
+  }
   
 }
