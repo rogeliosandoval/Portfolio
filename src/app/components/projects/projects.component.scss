@@ -30,6 +30,7 @@ position: relative;
 border-radius: 5px;
 height: 365px;
 overflow: hidden;
+background-image: url("../../../assets/projects/ythi.gif");
 background-image: url("../../../assets/projects/ythi.jpg");
 background-position: center;
 background-size: cover;
@@ -39,6 +40,13 @@ filter: grayscale(0.7);
 -ms-transition: 1s;
 -o-transition: 1s;
 transition: 1s;
+}
+
+.blog-grid .blog-img-ythi:before {
+  content: url("../../../assets/projects/ythi.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-ythi:hover {
@@ -51,6 +59,7 @@ position: relative;
 border-radius: 5px;
 height: 365px;
 overflow: hidden;
+background-image: url("../../../assets/projects/actionsix.gif");
 background-image: url("../../../assets/projects/actionsix-one.jpg");
 background-position: center;
 background-size: cover;
@@ -60,6 +69,13 @@ filter: grayscale(0.7);
 -ms-transition: 1s;
 -o-transition: 1s;
 transition: 1s;
+}
+
+.blog-grid .blog-img-action:before {
+  content: url("../../../assets/projects/actionsix.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-action:hover {
@@ -72,6 +88,7 @@ position: relative;
 border-radius: 5px;
 height: 365px;
 overflow: hidden;
+background-image: url("../../../assets/projects/soundbox.gif");
 background-image: url("../../../assets/projects/soundbox.jpg");
 background-position: top;
 background-size: cover;
@@ -81,6 +98,13 @@ filter: grayscale(0.7);
 -ms-transition: 1s;
 -o-transition: 1s;
 transition: 1s;
+}
+
+.blog-grid .blog-img-sound:before {
+  content: url("../../../assets/projects/soundbox.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-sound:hover {
@@ -93,6 +117,7 @@ transition: 1s;
   border-radius: 5px;
   height: 365px;
   overflow: hidden;
+  background-image: url("../../../assets/projects/mapbox.gif");
   background-image: url("../../../assets/projects/mapbox.jpg");
   background-position: top;
   background-size: cover;
@@ -102,6 +127,13 @@ transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+.blog-grid .blog-img-map:before {
+  content: url("../../../assets/projects/mapbox.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-map:hover {
@@ -114,6 +146,7 @@ transition: 1s;
   border-radius: 5px;
   height: 365px;
   overflow: hidden;
+  background-image: url("../../../assets/projects/todo-list.gif");
   background-image: url("../../../assets/projects/todo-list.jpg");
   background-position: top;
   background-size: cover;
@@ -123,6 +156,13 @@ transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+.blog-grid .blog-img-todo:before {
+  content: url("../../../assets/projects/todo-list.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-todo:hover {
@@ -135,6 +175,7 @@ transition: 1s;
   border-radius: 5px;
   height: 365px;
   overflow: hidden;
+  background-image: url("../../../assets/projects/hopper.gif");
   background-image: url("../../../assets/projects/hopper.jpg");
   background-position: top;
   background-size: cover;
@@ -144,6 +185,13 @@ transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+.blog-grid .blog-img-hopper:before {
+  content: url("../../../assets/projects/hopper.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
 }
 
 .blog-grid .blog-img-hopper:hover {
@@ -247,8 +295,8 @@ color: darkgrey;
 letter-spacing: 0.5px;
 }
 .blog-grid .blog-info p {
-  color: lightgrey;
-  font-size: 20px;
+color: lightgrey;
+font-size: 20px;
 margin: 0;
 }
 .blog-grid .blog-info .btn-bar {
@@ -304,7 +352,7 @@ text-decoration: none;
 }
 
 .button-50:hover {
-    color: powderblue;
+color: powderblue;
 text-decoration: none;
 }
 
