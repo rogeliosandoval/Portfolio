@@ -316,6 +316,11 @@ textarea {
   .loading {
     width:120px;
   }
+
+  form {
+    margin:auto;
+    width: 500px;
+  }
 }
   
 @media (min-width: 992px) {
@@ -368,6 +373,10 @@ textarea {
     font-size: 30px;
     padding: 7px 20px;
     height: 45px;
+  }
+
+  form {
+    width: 550px;
   }
   
 }
