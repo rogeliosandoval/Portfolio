@@ -280,33 +280,34 @@
 
 }
 
-
 @media (min-width: 992px) {
     .custom-container {
         width: auto;
     }
 
     .titleText {
-        font-size: 55px;
+        font-size: 50px;
         color: lightgrey;
         letter-spacing: 2px;
     }
 
     .button-50 {
-        font-size: 28px;
+        font-size: 25px;
         padding: 13px 5px;
-        width: 130px;
+        width: 120px;
     }
 
     .socials {
         position: fixed;
         bottom: 0;
         right: 0;
-        padding: 20px;
+        padding: 5px;
         z-index: 3;
         -webkit-animation: fadeIn 3s forwards, slideInRight 2s forwards;
         -moz-animation: fadeIn 3s forwards, slideInRight 2s forwards;
         animation: fadeIn 3s forwards, slideInRight 2s forwards;
+        background:rgba(49, 49, 49, 0.900);
+        border-top-left-radius: 20px;
     }
 
     .navigation {
@@ -329,6 +330,27 @@
     .body {
         padding-top: 120px;
     }
+}
+
+
+@media (min-width: 1061px) {
+
+    .titleText {
+        font-size: 55px;
+        color: lightgrey;
+        letter-spacing: 2px;
+    }
+
+    .button-50 {
+        font-size: 28px;
+        padding: 13px 5px;
+        width: 130px;
+    }
+
+    .socials {
+        padding: 10px;
+    }
+
 }
 
 @media (min-width: 1700px) {
