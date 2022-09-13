@@ -13,6 +13,68 @@
         </div>
     </div>
     <div class="row">
+        <!--ghost minna-->
+        <div class="col-md-6 minna" style="visibility:hidden;" *ngIf="!showMinna" (appear)="triggerMinna()">
+            <div class="blog-grid">
+                <div class="blog-img-minna">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
+                        <img class="html icon ml-2 ml-lg-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-lg-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/scss.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-lg-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/firebase.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Minna</h3>
+                    <p>A social platform that allows users to create posts about any topic they choose. Anonymous options are available when creating posts as well as posting comments. A personal notebook is provided with every account for simple note taking if desired.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">How to intergrate CRUD operations using a backend service. Implementing authentication and guards for a more secure and smooth UI/UX. Dynamically changing variables based off of user specific properties. Creating custom pipes for different use cases.</p>
+                    <div class="btn-bar">
+                        <a href="https://minna-c691d.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Minna" target="_blank" style="text-decoration:none;">
+                            <button class="ml-lg-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--the real minna-->
+        <div class="col-md-6 minna" *ngIf="showMinna">
+            <div class="blog-grid">
+                <div class="blog-img-minna">
+                    <div class="date">
+                        <img class="icon" src="../../../assets/icons/angular.png" alt="icon">
+                        <img class="html icon ml-2 ml-lg-3" src="../../../assets/icons/html.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/javascript.png" alt="icon">
+                        <img class="css icon ml-2 ml-lg-3" src="../../../assets/icons/css.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/scss.png" alt="icon">
+                        <img class="bootstrap icon ml-2 ml-lg-3" src="../../../assets/icons/bootstrap.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/typescript.png" alt="icon">
+                        <img class="icon ml-2 ml-lg-3" src="../../../assets/icons/firebase.png" alt="icon">
+                    </div>
+                </div>
+                <div class="blog-info">
+                    <h3>Minna</h3>
+                    <p>A social platform that allows users to create posts about any topic they choose. Anonymous options are available when creating posts as well as posting comments. A personal notebook is provided with every account for simple note taking if desired.</p>
+                    <p style="color:darkgrey;"><b>|</b> What I Learned</p>
+                    <p class="ml-2">How to intergrate CRUD operations using a backend service. Implementing authentication and guards for a more secure and smooth UI/UX. Dynamically changing variables based off of user specific properties. Creating custom pipes for different use cases.</p>
+                    <div class="btn-bar">
+                        <a href="https://minna-c691d.web.app/home" target="_blank" style="text-decoration: none;">
+                            <button class="button-50" style="color:white;">Live Demo</button>
+                        </a>
+                        <a href="https://github.com/rogeliosandoval/Minna" target="_blank" style="text-decoration:none;">
+                            <button class="ml-lg-3 button-50" style="background-color:darkgrey; color:black;">Source Code</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--ghost ythi-->
         <div class="col-md-6 ythi" style="visibility:hidden;" *ngIf="!showYthi" (appear)="triggerYthi()">
             <div class="blog-grid">
@@ -28,9 +90,9 @@
                 </div>
                 <div class="blog-info">
                     <h3>Your Time Home Inspections</h3>
-                    <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company.</p>
+                    <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company. This website is still in development but the frontend is mostly finished.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
-                    <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a smooth experience.</p>
+                    <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a more smooth experience with easy to access links to information about the company. Implement different design techniques.</p>
                     <div class="btn-bar">
                         <a href="https://your-time-home-inspections.web.app/home" target="_blank" style="text-decoration: none;">
                             <button class="button-50" style="color:white;">Live Demo</button>
@@ -57,9 +119,9 @@
                 </div>
                 <div class="blog-info">
                     <h3>Your Time Home Inspections</h3>
-                    <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company.</p>
+                    <p>A website for a home inspection company that allows clients to book inspections online and learn more about the company. This website is still in development but the frontend is mostly finished.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
-                    <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a smooth experience.</p>
+                    <p class="ml-2">Took this opportunity to learn more about the Angular framework as well as to practice with design. Focused more on the UX to give clients a more smooth experience with easy to access links to information about the company. Implement different design techniques.</p>
                     <div class="btn-bar">
                         <a href="https://your-time-home-inspections.web.app/home" target="_blank" style="text-decoration: none;">
                             <button class="button-50" style="color:white;">Live Demo</button>
@@ -90,7 +152,7 @@
                     <h3>Action 6</h3>
                     <p>An application with some javascript games to pass the time when boredom hits. A call to a "bored" API is also provided to give the user ideas on what else to do.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
-                    <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games.</p>
+                    <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games using javascript/typescript.</p>
                     <div class="btn-bar">
                         <a href="https://action-six.web.app/home" target="_blank" style="text-decoration: none;">
                             <button class="button-50" style="color:white;">Live Demo</button>
@@ -121,7 +183,7 @@
                     <h3>Action 6</h3>
                     <p>An application with some javascript games to pass the time when boredom hits. A call to a "bored" API is also provided to give the user ideas on what else to do.</p>
                     <p style="color:darkgrey;"><b>|</b> What I Learned</p>
-                    <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games.</p>
+                    <p class="ml-2">How to manipulate DOM elements through the Angular framework, dynamic styling, and programming. A great experience on how to create simple games using javascript/typescript.</p>
                     <div class="btn-bar">
                         <a href="https://action-six.web.app/home" target="_blank" style="text-decoration: none;">
                             <button class="button-50" style="color:white;">Live Demo</button>

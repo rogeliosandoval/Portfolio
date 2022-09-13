@@ -7,12 +7,17 @@ import { Component, Input } from "@angular/core";
 })
 
 export class Projects {
+    @Input() showMinna = false;
     @Input() showYthi = false;
     @Input() showAction = false;
     @Input() showSoundbox = false;
     @Input() showMapbox = false;
     @Input() showTodo = false;
     @Input() showHopper = false;
+
+    triggerMinna() {
+        this.showMinna = true;
+    }
 
     triggerYthi() {
         this.showYthi = true;

@@ -25,6 +25,35 @@ margin-top: 15px;
 margin-bottom: 15px;
 }
 
+.blog-grid .blog-img-minna {
+position: relative;
+border-radius: 5px;
+height: 365px;
+overflow: hidden;
+background-image: url("../../../assets/projects/minna.gif");
+background-image: url("../../../assets/projects/minna.jpg");
+background-position: center;
+background-size: cover;
+filter: grayscale(0.5);
+-webkit-transition: 1s;
+-moz-transition: 1s;
+-ms-transition: 1s;
+-o-transition: 1s;
+transition: 1s;
+}
+  
+.blog-grid .blog-img-minna:before {
+  content: url("../../../assets/projects/minna.gif");
+  width:0;
+  height:0;
+  visibility:hidden;
+}
+
+.blog-grid .blog-img-minna:hover {
+  background-image: url("../../../assets/projects/minna.gif");
+  background-position: center;
+}
+
 .blog-grid .blog-img-ythi {
 position: relative;
 border-radius: 5px;
@@ -199,6 +228,19 @@ transition: 1s;
   background-position: center;
 }
 
+.blog-grid .blog-img-minna .date {
+  position: absolute;
+  background: grey;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 0;
+  top: 10px;
+  font-size: 20px;
+}
+
 .blog-grid .blog-img-ythi .date {
   position: absolute;
   background: grey;
@@ -366,13 +408,13 @@ box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 transform: translate(2px, 2px);
 }
 
-.ythi, .soundbox, .todo, .title-left {
+.minna, .action, .mapbox, .todo, .title-left {
   -webkit-animation: fadeIn 5s forwards, slideInLeft 2s forwards;
   -moz-animation: fadeIn 5s forwards, slideInLeft 2s forwards;
   animation: fadeIn 5s forwards, slideInLeft 2s forwards;
 }
 
-.action, .mapbox, .hopper, .title-right {
+.ythi, .soundbox, .hopper, .title-right {
   -webkit-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   -moz-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   animation: fadeIn 5s forwards, slideInRight 2s forwards;

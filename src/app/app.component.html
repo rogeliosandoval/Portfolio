@@ -11,7 +11,7 @@
 <div class="mobile-nav d-block d-lg-none" [ngClass]="{fadeInNav: mobileShow}" [ngClass]="{hiddenNav: hiddenNav}">
     <div class="row">
         <div class="col-8 my-auto">
-            <p class="text-center my-auto" style="color: lightgrey; font-size:36px;">
+            <p class="text-center my-auto" style="color: lightgrey; font-size:36px;" (click)="scrollToTheTop()">
                 Rogelio G Sandoval III
             </p>
         </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="row">
             <div class="col-lg-5 my-auto">
-                <div class="titleText text-center">
+                <div class="titleText text-center" style="cursor:pointer;" (click)="scrollToTheTop()">
                     Rogelio G. Sandoval III
                 </div>
             </div>
@@ -100,7 +100,7 @@
 </div>
 <div class="body">
     <home #home></home>
-    <projects [showYthi]="boolean" [showAction]="boolean" [showSoundbox]="boolean" [showMapbox]="boolean" [showTodo]="boolean" [showHopper]="boolean"></projects>
+    <projects [showYthi]="boolean" [showAction]="boolean" [showSoundbox]="boolean" [showMapbox]="boolean" [showTodo]="boolean" [showHopper]="boolean" [showMinna]="boolean"></projects>
     <contact [showMessage]="boolean"></contact>
 </div>
 <div class="bodyText text-center my-1" style="font-size:20px; opacity:0.4;">

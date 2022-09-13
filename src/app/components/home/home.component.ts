@@ -24,7 +24,7 @@ export class Home {
         {name:"tailwind", class:"tailwind"},
         {name:"svelte", class:"svelte"},
         {name:"vscode", class:"vscode"},
-        {name:"jquery", class:"jquery"},
+        {name:"firebase", class:"firebase"},
         {name:"photoshop", class:"photoshop"}
     ];
 
