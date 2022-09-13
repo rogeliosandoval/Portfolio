@@ -79,7 +79,7 @@
                     Thank You!
                 </div>
             </div>
-            <form [formGroup]="contactForm" *ngIf="showForm">
+            <form [formGroup]="contactForm" *ngIf="showForm" [ngClass]="{ 'fade': showLoad || fadeForm }">
         
                 <div class="form-panel">
                     <div class="form-row">
@@ -121,18 +121,21 @@
             </form>
             <div class="d-flex justify-content-center my-3" *ngIf="showForm">
                 <div class="all-buttons" *ngIf="allButtons">
-                    <div class="send-buttons" *ngIf="!showLoad">
-                        <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid">
+                    <div class="send-buttons">
+                        <button class="button-50" style="background: black;" role="button" (click)="onSubmit()" *ngIf="contactForm.valid && !buttonClicked" >
                             Send
                         </button>
                         <button class="button-502" role="button" *ngIf="contactForm.invalid">
                             Send
                         </button>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <img class="loading mb-5" src="../../../assets/loading.gif" alt="loading" *ngIf="showLoad">
+                        <button class="button-502" role="button" *ngIf="buttonClicked">
+                            Send
+                        </button>
                     </div>
                 </div>
+            </div>
+            <div class="bar d-flex justify-content-center" *ngIf="showLoad">
+                <img class="loading mb-5" src="../../../assets/loading.gif" alt="loading">
             </div>
         </div>
     </div>

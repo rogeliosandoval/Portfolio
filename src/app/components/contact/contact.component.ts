@@ -54,6 +54,8 @@ export class Contact {
     showForm = true;
     showLoad = false;
     allButtons = true;
+    buttonClicked = false;
+    fadeForm = false;
 
     //Form state
     loading = false;
@@ -95,7 +97,10 @@ export class Contact {
     //Web3Forms
     onSubmit() {
         this.showLoad = true;
+        this.buttonClicked = true;
         this.contact.saveMessage(this.contactForm.value).subscribe(response => {
+            this.fadeForm = true;
+            this.showLoad = false;
             this.allButtons = false;
             this.modalService.open(NgbdModalContent);
             this.contactForm.reset();
@@ -105,6 +110,7 @@ export class Contact {
             }, 3000)
         },error => {
             this.showLoad = false;
+            this.buttonClicked = false;
             this.modalService.open(NgbdModalContentError);
             setTimeout(() => {
                 this.modalService.dismissAll(NgbdModalContentError);
@@ -119,7 +125,10 @@ export class Contact {
     //For testing
     onTest() {
         this.showLoad = true;
+        this.buttonClicked = true;
         setTimeout(() => {
+            this.fadeForm = true;
+            this.showLoad = false;
             this.allButtons = false;
             this.modalService.open(NgbdModalContent);
             this.contactForm.reset();
@@ -135,6 +144,7 @@ export class Contact {
         this.showLoad = true;
         setTimeout(() => {
             this.showLoad = false;
+            this.buttonClicked = false;
             this.modalService.open(NgbdModalContentError);
             setTimeout(() => {
                 this.modalService.dismissAll(NgbdModalContentError);

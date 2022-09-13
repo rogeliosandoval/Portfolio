@@ -98,6 +98,20 @@ box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 transform: translate(2px, 2px);
 }
 
+.fade {
+  position: relative;
+  isolation: isolate;
+  opacity: 0.2
+}
+
+.fade:after {
+  content: '';
+  position: absolute;
+  inset:0;
+  background:black;
+  opacity:0;
+}
+
 .mail {
   width: 40%;
 }
@@ -154,6 +168,15 @@ textarea {
 
 .small-text {
   font-size: 23px;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .loading {
