@@ -408,13 +408,13 @@ box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
 transform: translate(2px, 2px);
 }
 
-.minna, .action, .mapbox, .todo, .title-left {
+.ythi, .action, .mapbox, .todo, .title-left {
   -webkit-animation: fadeIn 5s forwards, slideInLeft 2s forwards;
   -moz-animation: fadeIn 5s forwards, slideInLeft 2s forwards;
   animation: fadeIn 5s forwards, slideInLeft 2s forwards;
 }
 
-.ythi, .soundbox, .hopper, .title-right {
+.minna, .soundbox, .hopper, .title-right {
   -webkit-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   -moz-animation: fadeIn 5s forwards, slideInRight 2s forwards;
   animation: fadeIn 5s forwards, slideInRight 2s forwards;
