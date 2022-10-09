@@ -84,7 +84,6 @@
             <div class="col-md-1 mx-4 my-4 mx-md-0 my-md-2 icon d-flex justify-content-center" *ngFor="let language of languages">
                 <img class="{{language.class}}" src="../../../assets/icons/{{language.name}}.png" alt="icon">
             </div>
-            <span #projectSectionMobile class="d-block d-md-none"></span>
         </div>
     </div>
     <div class="d-block d-md-none skills pb-md-5 mt-4 mt-md-0" *ngIf="skills">
@@ -117,3 +116,4 @@
     </div>
     <!--end desktop-->
 </div>
+<span #projectSectionMobile class="projectScrollMobile d-block d-md-none"></span>
