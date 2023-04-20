@@ -39,14 +39,14 @@ export class AppComponent {
     }
 
     //projects active
-    if (window.pageYOffset > 650 && window.pageYOffset < 2850) {
+    if (window.pageYOffset > 650 && window.pageYOffset < 3550) {
       this.projectsActive = true;
       this.homeActive = false;
       this.contactActive = false;
     }
 
     //contact active
-    if (window.pageYOffset > 2850) {
+    if (window.pageYOffset > 3550) {
       this.contactActive = true;
       this.homeActive = false;
       this.projectsActive = false;
