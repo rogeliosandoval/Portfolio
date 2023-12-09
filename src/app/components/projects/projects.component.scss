@@ -59,8 +59,8 @@ position: relative;
 border-radius: 5px;
 height: 365px;
 overflow: hidden;
-background-image: url("../../../assets/projects/ythi.gif");
-background-image: url("../../../assets/projects/ythi.jpg");
+background-image: url("../../../assets/projects/ythiv2.gif");
+background-image: url("../../../assets/projects/ythiv2.jpg");
 background-position: center;
 background-size: cover;
 filter: grayscale(0.7);
@@ -72,14 +72,14 @@ transition: 1s;
 }
 
 .blog-grid .blog-img-ythi:before {
-  content: url("../../../assets/projects/ythi.gif");
+  content: url("../../../assets/projects/ythiv2.gif");
   width:0;
   height:0;
   visibility:hidden;
 }
 
 .blog-grid .blog-img-ythi:hover {
-  background-image: url("../../../assets/projects/ythi.gif");
+  background-image: url("../../../assets/projects/ythiv2.gif");
   background-position: center;
 }
 
