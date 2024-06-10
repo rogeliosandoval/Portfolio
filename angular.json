@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rogelio-portfolio:build:production"
+              "buildTarget": "rogelio-portfolio:build:production"
             },
             "development": {
-              "browserTarget": "rogelio-portfolio:build:development"
+              "buildTarget": "rogelio-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rogelio-portfolio:build"
+            "buildTarget": "rogelio-portfolio:build"
           }
         },
         "test": {
