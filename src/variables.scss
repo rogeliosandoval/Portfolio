@@ -1,8 +1,28 @@
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  z-index: 0;
 }
 
 .nav-link-active {
   color: royalblue !important;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  font-size: 3rem;
+}
+
+.page-subtitle {
+  font-size: 1.4rem;
 }
