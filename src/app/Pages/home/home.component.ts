@@ -1,4 +1,5 @@
-import { Component } from "@angular/core"
+import { Component, inject } from '@angular/core'
+import { SharedService } from 'src/app/services/shared.service'
 
 @Component({
   selector: 'home',
@@ -7,5 +8,5 @@ import { Component } from "@angular/core"
 })
 
 export class Home {
-
+  public sharedService = inject(SharedService)
 }
