@@ -1,3 +1,78 @@
-h1 {
-  color: red;
+@import "src/variables.scss";
+@import 'include-media';
+
+.project-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+.project-preview {
+  margin-left: auto;
+  width: 700px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.488);
+}
+
+.project-preview-invert {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.info {
+  position: absolute;
+  bottom: -50px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.117);
+}
+
+.info-invert {
+  right: 0;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    height: 23px;
+    width: 6px;
+    background-color: orange;
+  }
+}
+
+.info-description {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.info-buttons {
+  button {
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+
+  & button:first-child {
+    margin-right: 20px;
+  }
+}
+
+.project-logo {
+  position: absolute;
+  left: 70px;
+  bottom: 70px;
+
+  img {
+    width: 200px;
+  }
+}
+
+.project-logo-invert {
+  left: auto;
+  right: 0;
 }
