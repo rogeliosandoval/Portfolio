@@ -1,1 +1,29 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+  <div class="sub-container">
+    <div class="navbar">
+      <img src="assets/headshot_two.jpeg" alt="avatar">
+      <div class="navbar-description">
+        <div class="name">
+          Roger Sandoval
+        </div>
+        <div class="nav-link-container">
+          @for (link of navLinks; track link) {
+            <div class="nav-link"
+              [class.nav-link-active]="sharedService.grabRoute() === link.route"
+              routerLink="{{ link.route }}">
+              {{ link.label }}
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="main-view">
+      <router-outlet></router-outlet>
+    </div>
+    <mat-divider style="color: lightgray"></mat-divider>
+    <div class="footer">
+      <span>© 2024 Roger Sandoval.</span>
+      <div>Built with <span style="color:red">Angular</span>.</div>
+    </div>
+  </div>
+</div>

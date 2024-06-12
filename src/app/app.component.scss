@@ -1,3 +1,87 @@
-h1 {
-  color: hotpink;
+@import "src/variables.scss";
+@import 'include-media';
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255, 1) 0%, rgba(207, 239, 255, 1) 90%);
+  height: auto;
+  padding: 50px;
+
+  @include media('<desktop') {
+    padding: 50px 25px;
+  }
+}
+
+.sub-container {
+  width: 1000px;
+
+  @include media('<desktop') {
+    width: 100%;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 100px;
+
+  img {
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.495);
+  }
+}
+
+.navbar-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: gray;
+  text-transform: uppercase;
+
+  &:hover {
+    color: royalblue;
+    cursor: pointer;
+  }
+}
+
+.name {
+  font-size: 2rem;
+  color: black;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    height: 23px;
+    width: 6px;
+    background-color: royalblue;
+  }
+}
+
+.main-view {
+  margin-bottom: 100px;
+}
+
+.footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
