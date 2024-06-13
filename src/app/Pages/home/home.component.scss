@@ -1,4 +1,5 @@
 @import "src/variables.scss";
+@import 'include-media';
 
 .about-block {
   position: relative;
@@ -13,10 +14,6 @@
   box-sizing: border-box;
   box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.117);
 
-  a {
-    color: royalblue;
-  }
-
   img {
     display: block;
     position: absolute;
@@ -30,10 +27,18 @@
       cursor: pointer;
       top: -84px;
     }
+
+    @include media('<tablet') {
+      display: none;
+    }
   }
 
   & .body-text:nth-child(4) {
     margin-bottom: 0;
+  }
+
+  @include media('<tablet') {
+    padding: 2rem;
   }
 }
 
@@ -44,12 +49,29 @@
   font-size: 1rem;
   font-weight: bold;
   color: royalblue;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media('<tablet') {
+    display: none;
+  }
 }
 
 .title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2.7rem;
   margin-bottom: 20px;
+
+  @include media('<desktop') {
+    font-size: 2rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 1rem;
+  }
 }
 
 .subtitle {
@@ -57,6 +79,15 @@
   font-style: normal;
   font-weight: 300;
   margin-bottom: 20px;
+
+  @include media('<desktop') {
+    font-size: 1.3rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
 }
 
 .body-text {
@@ -64,6 +95,15 @@
   font-style: normal;
   font-weight: 300;
   margin-bottom: 20px;
+
+  @include media('<desktop') {
+    font-size: 1.2rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
 }
 
 .firebase {
@@ -86,5 +126,20 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.mobile-resume {
+  display: none;
+}
+
+@include media('<tablet') {
+  .mobile-resume {
+    margin-top: 20px;
+    display: block;
+
+    button {
+      width: 100%;
+    }
   }
 }
