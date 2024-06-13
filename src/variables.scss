@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   z-index: 0;
+  animation: fadeIn 0.3s linear;
 }
 
 .nav-link-active {
@@ -25,4 +26,13 @@
 
 .page-subtitle {
   font-size: 1.4rem;
+}
+
+a {
+  color: royalblue;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
