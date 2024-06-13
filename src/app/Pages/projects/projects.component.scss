@@ -1,18 +1,37 @@
 @import "src/variables.scss";
 @import 'include-media';
 
+.container {
+  & .project-container:nth-child(4) {
+    margin-bottom: 120px;
+
+    @include media('<tablet') {
+      margin-bottom: 200px;
+    }
+  }
+}
+
 .project-container {
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 160px;
+
+  @include media('<tablet') {
+    margin-bottom: 180px;
+  }
 }
 
 .project-preview {
   margin-left: auto;
   width: 700px;
   border-radius: 20px;
-  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.488);
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.338);
+
+  @include media('<tablet') {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .project-preview-invert {
@@ -27,6 +46,10 @@
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.117);
+
+  @include media('<tablet') {
+    bottom: -140px;
+  }
 }
 
 .info-invert {
@@ -44,17 +67,39 @@
     width: 6px;
     background-color: orange;
   }
+
+  @include media('<tablet') {
+    font-size: 1.4rem;
+
+    &:before {
+      height: 19px;
+      width: 4px;
+    }
+  }
 }
 
 .info-description {
   font-size: 1.2rem;
   margin-bottom: 10px;
+
+  @include media('<tablet') {
+    font-size: 1rem;
+  }
 }
 
 .info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
   button {
+    width: 120px;
     letter-spacing: 0;
     font-weight: bold;
+
+    @include media('<tablet') {
+      font-weight: 500;
+    }
   }
 
   & button:first-child {
@@ -69,6 +114,10 @@
 
   img {
     width: 200px;
+  }
+
+  @include media('<tablet') {
+    display: none;
   }
 }
 

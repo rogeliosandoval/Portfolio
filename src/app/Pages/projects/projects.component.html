@@ -11,7 +11,7 @@
     <div class="project-container">
       <div class="project-logo"
         [class.project-logo-invert]="project.invert === true">
-        <img attr.src="assets/logos/{{project.logoURL}}" alt="project-logo">
+        <img attr.src="assets/logos/{{project.logoURL}}" alt="project-logo" draggable="false">
       </div>
       <div class="info"
         [class.info-invert]="project.invert === true">
@@ -24,14 +24,17 @@
         <div class="info-buttons">
           <button mat-raised-button color="accent" routerLink="{{project.routeURL}}">Learn More</button>
           <a href="{{project.demoURL}}" target="_blank">
-            <button mat-raised-button color="warn">Live Sire</button>
+            <button mat-raised-button color="warn">Live Site</button>
           </a>
         </div>
       </div>
       <img class="project-preview"
         [class.project-preview-invert]="project.invert === true" 
         src="assets/projects/{{project.gifURL}}.gif" 
-        alt="{{project.logoURL}}">
+        alt="{{project.logoURL}}" draggable="false">
     </div>
   }
+  <div class="page-subtitle">
+    Check out my <a href="https://github.com/rogeliosandoval" target="_blank">GitHub</a> for more projects!
+  </div>
 </div>

@@ -32,8 +32,8 @@ export class Projects {
     {
       title: 'Action 6',
       description: 'A virtual arcade with JavaScript games to kill time.',
-      gifURL: 'actionsix',
-      logoURL: 'actionsix.png',
+      gifURL: 'action-six',
+      logoURL: 'action-six.png',
       demoURL: 'https://action-six.web.app/home',
       routeURL: '/projects/actionsix',
       invert: false
