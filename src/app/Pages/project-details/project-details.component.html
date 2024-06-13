@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="project-title">
+    {{ project.title}}
+    <a attr.href="{{project.demoURL}}" target="_blank">
+      <button mat-flat-button color="warn">Live Site</button>
+    </a>
+  </div>
+  <div class="techused">Technologies used:</div>
+  <div class="technologies">
+    <div class="icons">
+      @for (icon of project.technologies; track icon) {
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}" />
+      }
+    </div>
+  </div>
+  <div class="project-description">
+    {{ project.description }}
+  </div>
+  <div class="project-learned">
+    <span>What I Learned:</span>
+    {{ project.learned }}
+  </div>
+  <div class="project-preview">
+    <img src="assets/projects/{{project.gifURL}}.gif" alt="">
+  </div>
+  <div class="conclusion">
+    Check out the repository on <a attr.href="{{project.repoURL}}" target="_blank">GitHub</a>!
+  </div>
+  <img class="logo" attr.src="assets/logos/{{project.logoURL}}" alt="logo">
+</div>
