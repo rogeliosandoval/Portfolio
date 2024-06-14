@@ -1,15 +1,27 @@
 <div class="container">
   <div class="project-title">
     {{ project.title}}
-    <a attr.href="{{project.demoURL}}" target="_blank">
-      <button mat-flat-button color="warn">Live Site</button>
-    </a>
+    <div class="normal-button">
+      <a attr.href="{{project.demoURL}}" target="_blank">
+        <button mat-flat-button color="warn">Live Site</button>
+      </a>
+    </div>
+    <div class="mobile-button">
+      <a attr.href="{{project.demoURL}}" target="_blank">
+        <button mat-flat-button color="warn">Live Site</button>
+      </a>
+    </div>
   </div>
+  @if (project.built !== '') {
+    <div class="techused">
+      Built with: <span>{{ project.built }}</span>
+    </div>
+  }
   <div class="techused">Technologies used:</div>
   <div class="technologies">
     <div class="icons">
       @for (icon of project.technologies; track icon) {
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{icon}}" draggable="false"/>
       }
     </div>
   </div>
@@ -17,14 +29,20 @@
     {{ project.description }}
   </div>
   <div class="project-learned">
-    <span>What I Learned:</span>
+    <span>{{ project.learnedDesc ? 'What I Learned:' : 'My Contribution'}}   </span>
     {{ project.learned }}
   </div>
   <div class="project-preview">
-    <img src="assets/projects/{{project.gifURL}}.gif" alt="">
+    @if (project.learnedDesc) {
+      <img src="assets/projects/{{project.picURL}}" alt="preview" draggable="false">
+    } @else {
+      <img src="assets/work/{{project.picURL}}" alt="preview" draggable="false">
+    }
   </div>
-  <div class="conclusion">
-    Check out the repository on <a attr.href="{{project.repoURL}}" target="_blank">GitHub</a>!
-  </div>
-  <img class="logo" attr.src="assets/logos/{{project.logoURL}}" alt="logo">
+  @if (project.learnedDesc) {
+    <div class="conclusion">
+      Check out the repository on <a attr.href="{{project.repoURL}}" target="_blank">GitHub</a>!
+    </div>
+  }
+  <img class="logo" attr.src="assets/logos/{{project.logoURL}}" alt="logo" draggable="false">
 </div>

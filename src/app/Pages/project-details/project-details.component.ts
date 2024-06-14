@@ -23,10 +23,12 @@ export class ProjectDetails implements OnInit {
       "typescript/typescript-original.svg",
       "firebase/firebase-original.svg"
     ],
-    gifURL: 'budget-boy',
+    picURL: 'budget-boy.gif',
     demoURL: 'https://budget-boy-ac3a5.web.app/home',
     repoURL: 'https://github.com/rogeliosandoval/Budget-Boy',
-    logoURL: 'budget-boy.png'
+    logoURL: 'budget-boy.png',
+    learnedDesc: true,
+    built: ''
   }
   public minna = {
     title: 'Minna',
@@ -41,10 +43,12 @@ export class ProjectDetails implements OnInit {
       "typescript/typescript-original.svg",
       "firebase/firebase-original.svg"
     ],
-    gifURL: 'minna',
+    picURL: 'minna.gif',
     demoURL: 'https://minna-c691d.web.app/home',
     repoURL: 'https://github.com/rogeliosandoval/Minna',
-    logoURL: 'minna.svg'
+    logoURL: 'minna.svg',
+    learnedDesc: true,
+    built: ''
   }
   public actionsix = {
     title: 'Action 6',
@@ -59,12 +63,63 @@ export class ProjectDetails implements OnInit {
       "typescript/typescript-original.svg",
       "photoshop/photoshop-original.svg"
     ],
-    gifURL: 'action-six',
+    picURL: 'action-six.gif',
     demoURL: 'https://action-six.web.app/home',
     repoURL: 'https://github.com/rogeliosandoval/Action-Six',
-    logoURL: 'action-six.png'
+    logoURL: 'action-six.png',
+    learnedDesc: true,
+    built: ''
   }
-  
+  public riseup = {
+    title: 'Rise Up Acai Bowls',
+    description: 'Rise up is a popular acai cafe located in San Antonio, Texas. Starting off in a food truck, Rise Up has grown in popularity over the years and now has two locations within the San Antonio area.',
+    learned: 'I am currently responsible for the maintenance and implementation of new features upon request by the owner. The design is not by me.',
+    picURL: 'rise-up.png',
+    technologies: [
+      "html5/html5-original.svg",
+      "css3/css3-original.svg",
+      "javascript/javascript-original.svg"
+    ],
+    demoURL: 'https://riseupsatx.com/',
+    logoURL: 'rise-up.png',
+    learnedDesc: false,
+    built: 'Squarespace'
+  }
+  public startcenter = {
+    title: 'The START Center',
+    description: 'The START Center combines sophisticated treatment modalities & one of the world\'s largest and most active Phase I clinical trial programs.',
+    learned: 'While I was employed here I had the honor to contribute to the complete redesign of the company website. Building out the frontend that included forms, navigation, footer and many other features, I am glad to have been apart of something very beneficial to the patients.',
+    picURL: 'start-center.png',
+    technologies: [
+      "angularjs/angularjs-original.svg",
+      "html5/html5-original.svg",
+      "css3/css3-original.svg",
+      "javascript/javascript-original.svg",
+      "bootstrap/bootstrap-original.svg",
+      "typescript/typescript-original.svg",
+      "jquery/jquery-original.svg"
+    ],
+    demoURL: 'https://www.thestartcenter.com/',
+    logoURL: 'start-center.png',
+    learnedDesc: false,
+    built: ''
+  }
+  public ythi = {
+    title: 'Your Time Home Inspections',
+    description: 'Your Time Home Inspections is a Texas licensed professional inspection company, giving thier clients confidence in their property.',
+    learned: 'I am currently responsible for the maintenance and implementations of new features upon request by the owners. The design is not by me.',
+    picURL: 'ythi.png',
+    technologies: [
+      "html5/html5-original.svg",
+      "css3/css3-original.svg",
+      "javascript/javascript-original.svg",
+      "jquery/jquery-original.svg"
+    ],
+    demoURL: 'hhttps://yourtimehomeinspections.com/',
+    logoURL: 'ythi.png',
+    learnedDesc: false,
+    built: 'Wordpress'
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
@@ -75,6 +130,12 @@ export class ProjectDetails implements OnInit {
         this.project = this.minna
       } else if (params['id'] === 'actionsix') {
         this.project = this.actionsix
+      } else if (params['id'] === 'riseup') {
+        this.project = this.riseup
+      } else if (params['id'] === 'startcenter') {
+        this.project = this.startcenter
+      } else if (params['id'] === 'ythi') {
+        this.project = this.ythi
       }
     })
   }
