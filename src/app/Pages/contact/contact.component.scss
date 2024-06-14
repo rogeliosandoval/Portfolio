@@ -1,3 +1,106 @@
-h1 {
-  color: green;
+@import "src/variables.scss";
+@import 'include-media';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgb(68, 68, 68);
+  text-align: center;
+  width: 700px;
+
+  @include media('<tablet') {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  color: royalblue;
+  margin-top: 10px;
+
+  @include media('<tablet') {
+    font-size: 0.9rem;
+  }
+}
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+
+  button {
+    height: 50px;
+    width: 150px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+  }
+
+  mat-spinner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  textarea {
+    font-size: 1.2rem;
+
+    @include media('<tablet') {
+      font-size: 1rem;
+    }
+  }
+
+  @include media('<tablet') {
+    gap: 30px;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  mat-form-field {
+    width: 300px;
+    font-size: 1.2rem;
+
+    @include media('<tablet') {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  @include media('<tablet') {
+    gap: 30px;
+  }
+}
+
+.subject-input {
+  width: 100%;
+  font-size: 1.2rem;
+
+  @include media('<tablet') {
+    font-size: 1rem;
+  }
+}
+
+.fade {
+  opacity: 0.5;
+  pointer-events: none;
 }
