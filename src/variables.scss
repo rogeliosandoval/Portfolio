@@ -1,10 +1,12 @@
+@import 'include-media';
+
 .container {
   position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
   z-index: 0;
-  animation: fadeIn 0.3s linear;
+  animation: fadeIn 0.4s linear;
 }
 
 .nav-link-active {
@@ -16,20 +18,42 @@
   flex-direction: column;
   gap: 20px;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  @include media('<tablet') {
+    margin-bottom: 50px;
+  }
 }
 
 .page-title {
-  font-size: 3rem;
+  font-size: 2.6rem;
+
+  @include media('<desktop') {
+    font-size: 2rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 1.5rem;
+  }
 }
 
 .page-subtitle {
   font-size: 1.4rem;
+  line-height: 2rem;
+
+  @include media('<desktop') {
+    font-size: 1.2rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 1rem;
+  }
 }
 
 a {
   color: royalblue;
+  text-decoration: none;
 }
 
 @keyframes fadeIn {

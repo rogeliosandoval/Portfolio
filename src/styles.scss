@@ -2,7 +2,7 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$green-palette, 500);
+$my-primary: mat.define-palette(mat.$blue-palette, 500);
 $my-accent: mat.define-palette(mat.$blue-grey-palette, A400, A100, A400);
 $my-typography: mat.define-typography-config();
 
@@ -21,4 +21,8 @@ $my-theme: mat.define-light-theme((
   font-family: "DM Sans", sans-serif;
   // font-weight: 100;
   // font-style: normal;
+}
+
+.mat-mdc-snack-bar-action {
+  transform: scale(1.3);
 }
