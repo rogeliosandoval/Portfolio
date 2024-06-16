@@ -1,1 +1,42 @@
-<h1>Work Page</h1>
+<div class="container">
+  <div class="header-container">
+    <div class="header-container">
+      <div class="page-title">
+        Work
+      </div>
+      <div class="page-subtitle">
+        Client projects and other professional work.
+      </div>
+    </div>
+  </div>
+    @for (project of projects; track project) {
+      <div class="project-container">
+        <div class="project-logo"
+          [class.project-logo-invert]="project.invert === true">
+          <img attr.src="assets/logos/{{project.logoURL}}" alt="project-logo" draggable="false">
+        </div>
+        <div class="info"
+          [class.info-invert]="project.invert === true">
+          <div class="info-title">
+            {{ project.title }}
+          </div>
+          <div class="info-description">
+            {{ project.description }}
+          </div>
+          <div class="info-buttons">
+            <button mat-raised-button color="accent" routerLink="{{project.routeURL}}">Learn More</button>
+            <a href="{{project.demoURL}}" target="_blank">
+              <button mat-raised-button color="warn">Live Site</button>
+            </a>
+          </div>
+        </div>
+        <img class="project-preview"
+          [class.project-preview-invert]="project.invert === true" 
+          src="assets/work/{{project.picURL}}" 
+          alt="{{project.logoURL}}" draggable="false">
+      </div>
+    }
+    <div class="page-subtitle">
+      If you would like a website or other web services feel free to <a routerLink="/contact">contact me</a>!
+    </div>
+</div>

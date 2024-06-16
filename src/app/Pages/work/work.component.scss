@@ -1,3 +1,11 @@
-h1 {
-  color: black;
+@import "src/variables.scss";
+@import 'include-media';
+@import '../projects/projects.component.scss';
+
+.header-container {
+  margin-bottom: 40px;
+
+  @include media('<tablet') {
+    margin-bottom: 20px;
+  }
 }
