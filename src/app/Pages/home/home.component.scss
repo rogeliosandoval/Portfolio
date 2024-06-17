@@ -38,7 +38,7 @@
   }
 
   @include media('<tablet') {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -86,8 +86,8 @@
   }
 
   @include media('<tablet') {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -102,8 +102,8 @@
   }
 
   @include media('<tablet') {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
 
