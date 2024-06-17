@@ -6,6 +6,7 @@
   font-weight: bold;
   // text-align: center;
   margin-bottom: 20px;
+  line-height: 2rem;
 
   &:before {
     display: inline-block;
@@ -25,7 +26,12 @@
   }
 
   @include media('<tablet') {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+
+    &:before {
+      height: 19px;
+      width: 5px;
+    }
 
     button {
       float: none;
