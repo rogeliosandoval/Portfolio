@@ -6,12 +6,16 @@
   flex-direction: column;
   align-items: center;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(255, 255, 255, 1) 0%, rgba(207, 239, 255, 1) 90%);
-  height: auto;
-  padding: 50px;
+  background: linear-gradient(0deg, rgb(255, 255, 255, 1) 0%, rgb(225, 244, 254) 90%);
+  height: 700px;
+  padding: 50px 50px 0 50px;
 
   @include media('<desktop') {
-    padding: 50px 25px;
+    padding: 35px 25px;
+  }
+
+  @include media('<tablet') {
+    padding: 25px;
   }
 }
 
@@ -28,19 +32,49 @@
   align-items: center;
   gap: 30px;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 
   img {
     width: 150px;
     border-radius: 20px;
     box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.495);
+
+    @include media('<desktop') {
+      width: 130px;
+    }
+
+    @include media('<tablet') {
+      width: 100px;
+    }
   }
+
+  @include media('<desktop') {
+    margin-bottom: 30px;
+  }
+
+  @include media('<tablet') {
+    align-items: flex-start;
+  }
+}
+
+.mobile-nav-title {
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .navbar-description {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
+
+  @include media('<desktop') {
+    gap: 20px;
+  }
+
+  @include media('<tablet') {
+    gap: 15px;
+  }
 }
 
 .nav-link-container {
@@ -48,6 +82,10 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+
+  @include media('<tablet') {
+    flex-direction: column;
+  }
 }
 
 .nav-link {
@@ -59,6 +97,14 @@
   &:hover {
     color: royalblue;
     cursor: pointer;
+  }
+
+  @include media('<desktop') {
+    font-size: 1rem;
+  }
+
+  @include media('<tablet') {
+    font-size: 0.9rem;
   }
 }
 
@@ -73,15 +119,63 @@
     width: 6px;
     background-color: royalblue;
   }
+
+  @include media('<desktop') {
+    font-size: 1.6rem;
+
+    &:before {
+      height: 18px;
+      width: 4px;
+    }
+  }
+
+  @include media('<tablet') {
+    font-size: 1.4rem;
+
+    &:before {
+      height: 15px;
+      width: 4px;
+    }
+  }
 }
 
 .main-view {
   margin-bottom: 100px;
+
+  @include media('<desktop') {
+    margin-bottom: 50px;
+  }
 }
 
 .footer {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 20px;
+  font-family: Rubik, sans-serif;
+  font-weight: 100;
+  margin-top: 50px;
+  letter-spacing: 0.5px;
+  margin-bottom: 90px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 10px;
+
+  @include media('<tablet') {
+    font-size: 0.9rem;
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+}
+
+.mobile-nav {
+  display: none;
+
+  @include media('<tablet') {
+    display: block;
+  }
+}
+
+@include media('<tablet') {
+  .regular-nav {
+    display: none;
+  }
 }

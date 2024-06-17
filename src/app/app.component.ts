@@ -9,6 +9,7 @@ import { SharedService } from './services/shared.service'
 
 export class AppComponent {
   public sharedService = inject(SharedService)
+  public panelOpenState = false
   public navLinks = [
     { label: 'Home', route: '/home' },
     { label: 'Projects', route: '/projects' },

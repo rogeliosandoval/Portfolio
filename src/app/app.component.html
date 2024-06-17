@@ -1,19 +1,49 @@
 <div class="main-container">
   <div class="sub-container">
     <div class="navbar">
-      <img src="assets/headshot_two.jpeg" alt="avatar">
+      <img src="assets/headshot_two.jpeg" alt="avatar" draggable="false" routerLink="/home">
       <div class="navbar-description">
         <div class="name">
           Roger Sandoval
         </div>
-        <div class="nav-link-container">
-          @for (link of navLinks; track link) {
-            <div class="nav-link"
-              [class.nav-link-active]="sharedService.grabRoute() === link.route"
-              routerLink="{{ link.route }}">
-              {{ link.label }}
-            </div>
-          }
+        <!--Movile Navlinks-->
+        <div class="mobile-nav">
+          <mat-accordion>
+            <mat-expansion-panel [expanded]="panelOpenState"
+              (opened)="panelOpenState = true" 
+              (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-description>
+                  <div class="mobile-nav-title">
+                    Navigation
+                  </div>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <br/>
+              <div class="nav-link-container">
+                @for (link of navLinks; track link) {
+                  <div class="nav-link"
+                    [class.nav-link-active]="sharedService.grabRoute() === link.route"
+                    routerLink="{{ link.route }}"
+                    (click)="panelOpenState = false">
+                    {{ link.label }}
+                  </div>
+                }
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <!--Regular Navlinks-->
+        <div class="regular-nav">
+          <div class="nav-link-container">
+            @for (link of navLinks; track link) {
+              <div class="nav-link"
+                [class.nav-link-active]="sharedService.grabRoute() === link.route"
+                routerLink="{{ link.route }}">
+                {{ link.label }}
+              </div>
+            }
+          </div>
         </div>
       </div>
     </div>
