@@ -88,7 +88,7 @@ export class ProjectDetails implements OnInit {
   public startcenter = {
     title: 'The START Center',
     description: 'The START Center combines sophisticated treatment modalities & one of the world\'s largest and most active Phase I clinical trial programs.',
-    learned: 'While I was employed here I had the honor to contribute to the complete redesign of the company website. Building out the frontend that included forms, navigation, footer and many other features, I am glad to have been apart of something very beneficial to the patients.',
+    learned: 'While I was employed here I had the honor to contribute to the complete redesign of the company website. Building out the frontend that included forms, navigation, footers and many other features, I am glad to have been apart of something very beneficial to the patients.',
     picURL: 'start-center.png',
     technologies: [
       "angularjs/angularjs-original.svg",
@@ -115,7 +115,7 @@ export class ProjectDetails implements OnInit {
       "javascript/javascript-original.svg",
       "jquery/jquery-original.svg"
     ],
-    demoURL: 'hhttps://yourtimehomeinspections.com/',
+    demoURL: 'https://yourtimehomeinspections.com/',
     logoURL: 'ythi.png',
     learnedDesc: false,
     built: 'Wordpress'
