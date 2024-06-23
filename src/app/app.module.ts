@@ -8,11 +8,11 @@ import { HttpClientModule } from '@angular/common/http'
 
 //Pages
 import { AppComponent } from './app.component'
-import { Home } from './Pages/home/home.component'
-import { Projects } from './Pages/projects/projects.component'
-import { ProjectDetails } from './Pages/project-details/project-details.component'
-import { Work } from './Pages/work/work.component'
-import { Contact } from './Pages/contact/contact.component';
+import { Home } from './pages/home/home.component'
+import { Projects } from './pages/projects/projects.component'
+import { ProjectDetails } from './pages/project-details/project-details.component'
+import { Work } from './pages/work/work.component'
+import { Contact } from './pages/contact/contact.component';
 
 //Angular Material
 import { MatDividerModule } from '@angular/material/divider'
